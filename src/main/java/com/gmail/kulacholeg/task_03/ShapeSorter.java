@@ -19,7 +19,7 @@ public class ShapeSorter {
 
     public List<Shape> sortShapes(){
         return shapes.stream()
-                .sorted(Comparator.comparingDouble(Shape::calculateSize))
+                .sorted(Comparator.comparingDouble(Shape::getVolume))
                 .collect(Collectors.toList());
     }
 }

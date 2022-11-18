@@ -26,9 +26,9 @@ class ShapeSorterTest {
 
         ShapeSorter sorter = new ShapeSorter(shapes);
 
-        assertEquals(27, sorter.sortShapes().get(0).calculateSize());
-        assertEquals(125, sorter.sortShapes().get(1).calculateSize());
-        assertEquals(4189, sorter.sortShapes().get(2).calculateSize());
+        assertEquals(27, sorter.sortShapes().get(0).getVolume());
+        assertEquals(125, sorter.sortShapes().get(1).getVolume());
+        assertEquals(4189, sorter.sortShapes().get(2).getVolume());
 
     }
 }

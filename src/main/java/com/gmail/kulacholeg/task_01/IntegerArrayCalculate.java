@@ -7,10 +7,7 @@ package com.gmail.kulacholeg.task_01;
   - {@link #streamMethodCalculate(int[])} - uses Stream API
  */
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class IntegerArrayCalculate {
@@ -40,7 +37,7 @@ public class IntegerArrayCalculate {
         for(int i = 0; i < result.length; i++){
             for(int j = i + 1; j <result.length; j++){
                 int temp = 0;
-                if (result[i] > result[j]){
+                if (result[i] < result[j]){
                     temp = result[i];
                     result[i] = result[j];
                     result[j] = temp;
@@ -62,7 +59,7 @@ public class IntegerArrayCalculate {
             if (value >= 0) result.add(value);
         };
         //sort List
-        Collections.sort(result);
+        result.sort(Collections.reverseOrder());
 
         return result;
     }
@@ -72,8 +69,8 @@ public class IntegerArrayCalculate {
         if(array != null)
             return Arrays.stream(array)
                     .filter(x -> x >= 0)
-                    .sorted()
                     .boxed()
+                    .sorted(Comparator.reverseOrder())
                     .collect(Collectors.toList());
         //if array is null return empty List
         System.out.println("Array is null");

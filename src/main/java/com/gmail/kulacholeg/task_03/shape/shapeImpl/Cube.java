@@ -11,7 +11,7 @@ public class Cube implements Shape {
     }
 
     @Override
-    public int calculateSize() {
+    public int getVolume() {
         return (int)Math.pow(side, 3);
     }
 }

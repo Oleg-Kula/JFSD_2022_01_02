@@ -13,17 +13,17 @@ class IntegerArrayCalculateTest {
 
     @Test
     void arrayCalculateTest() {
-        int[] expected = {0, 1, 4, 7};
+        int[] expected = {7, 4, 1, 0};
         assertArrayEquals(expected, integerArrayCalculate.arrayCalculate(arr));
     }
 
     @Test
     void collectionsMethodCalculate() {
         List<Integer> expected = new ArrayList<>();
-        expected.add(0);
-        expected.add(1);
-        expected.add(4);
         expected.add(7);
+        expected.add(4);
+        expected.add(1);
+        expected.add(0);
 
         assertEquals(expected, integerArrayCalculate.collectionsMethodCalculate(arr));
 
@@ -32,10 +32,10 @@ class IntegerArrayCalculateTest {
     @Test
     void streamMethodCalculate() {
         List<Integer> expected = new ArrayList<>();
-        expected.add(0);
-        expected.add(1);
-        expected.add(4);
         expected.add(7);
+        expected.add(4);
+        expected.add(1);
+        expected.add(0);
 
         assertEquals(expected, integerArrayCalculate.streamMethodCalculate(arr));
     }

@@ -10,7 +10,7 @@ public class Ball implements Shape {
     }
 
     @Override
-    public int calculateSize() {
+    public int getVolume() {
         return (int)Math.round(4.0/3 * Math.PI * Math.pow(radius, 3));
     }
 }
